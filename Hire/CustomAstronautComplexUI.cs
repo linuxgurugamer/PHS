@@ -192,6 +192,7 @@ namespace Hire
                 cost *= quality_coef;
 
                 KDiscount = 0;
+                KDiscountOverFlow = false;
                 KBlackMunday = false;
                 KNewYear = false;
 
