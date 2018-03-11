@@ -46,6 +46,7 @@ namespace Hire
         private string[] KLevelStringsAll = new string[6] { Level + " 0", Level + " 1", Level + " 2", Level + " 3", Level + " 4", Level + " 5" };
 
         private string[,] KNames = new string[3,10];
+        private ProtoCrewMember.Gender[] KNames2Gender = new ProtoCrewMember.Gender[10];
 
         private static string Male = Localizer.Format("#autoLOC_900434");
         private static string Female = Localizer.Format("#autoLOC_900444");
@@ -93,7 +94,9 @@ namespace Hire
             {
                 KNames[0, i] = CrewGenerator.GetRandomName(ProtoCrewMember.Gender.Male, rand);
                 KNames[1, i] = CrewGenerator.GetRandomName(ProtoCrewMember.Gender.Female, rand);
-                KNames[2, i] = (rand.Next() % 2 == 0) ? KNames[0, i] : KNames[1, i];
+
+                KNames2Gender[i] = (rand.Next() % 2 == 0) ? ProtoCrewMember.Gender.Male : ProtoCrewMember.Gender.Female;
+                KNames[2, i] = (KNames2Gender[i] == ProtoCrewMember.Gender.Male) ? KNames[0, i] : KNames[1, i];
             }
 
             enabled = true;
@@ -121,7 +124,7 @@ namespace Hire
                 {
                     case 0: newKerb.gender = ProtoCrewMember.Gender.Male; break;
                     case 1: newKerb.gender = ProtoCrewMember.Gender.Female; break;
-                    case 2: break;
+                    case 2: newKerb.gender = KNames2Gender[i]; break;
                     default: break;
                 }
 
