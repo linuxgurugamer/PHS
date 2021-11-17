@@ -1,5 +1,13 @@
 ChangeLog
 
+0.6.11
+	Thanks to @yalov for these changes and updates
+		Add a checkbox for Stupidity and Courage.  In the disabled state, Stupidity and Courage are random
+		new year discount is 2 days on the start and on the end of the year
+		put kerbal names inside GUILayout
+		remove "The" from the name of the rock
+		several discounts one per line
+
 0.6.10.3
 	Renamed DLL for CKAN compatibility
 	Added AssemblyFileVersion
