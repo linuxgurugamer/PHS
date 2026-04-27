@@ -1,5 +1,9 @@
 ChangeLog
 
+0.6.11.1
+	Fixed the  "Is Kerbal Quality Specified" still being active even when disabled
+	Updated the .version file to use github for new version info
+
 0.6.11
 	Thanks to @yalov for these changes and updates
 		Add a checkbox for Stupidity and Courage.  In the disabled state, Stupidity and Courage are random

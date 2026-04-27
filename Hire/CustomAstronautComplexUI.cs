@@ -144,7 +144,7 @@ namespace Hire
                 newKerb.rosterStatus = ProtoCrewMember.RosterStatus.Available;
                 newKerb.experience = 0;
                 newKerb.experienceLevel = 0;
-                if (KBulki > 1) // Bulk hires get random stats
+                if (KBulki > 1 || !KSpecifyQuality) // Bulk hires get random stats
                 {
                     // The equation gives 60% of results within +/-10% of GUI setting
                     if (KSpecifyQuality)
